@@ -1,6 +1,6 @@
 services:
-    image: initdc/test
+    image: initdc/liveapirender
     ports:
       - 80:80
     volumes:
-      - /Users/apple/data/files:/var/www/test/data/files
+      - /Users/apple/data/files:/var/www/liveapirender/data/files
