@@ -13,12 +13,12 @@ RUN set -e \
     && rm -rf /var/lib/apt/lists/*
 
 COPY liveapirender.conf /etc/nginx/conf.d/
-ADD ./ /var/www/liveapirender
 COPY run.sh /root/
 RUN set -e \
     && rm /etc/nginx/sites-enabled/default \
-    && chmod +x /root/run.sh \
-    && chmod -Rf 777 /root
+    && chmod +x /root/run.sh
+ADD ./ /var/www/liveapirender
+RUN chmod -Rf 777 /var/www/liveapirender
 
 EXPOSE 443
 
