@@ -1,0 +1,6 @@
+services:
+    image: initdc/test
+    ports:
+      - 80:80
+    volumes:
+      - /Users/apple/data/files:/var/www/test/data/files
