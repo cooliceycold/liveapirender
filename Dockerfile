@@ -16,6 +16,7 @@ COPY liveapirender.conf /etc/nginx/conf.d/
 COPY run.sh /root/
 RUN set -e \
     && rm /etc/nginx/sites-enabled/default \
+    && chmod +x /root/run.sh \
     && git clone https://github.com/cooliceycold/liveapirender.git /var/www/liveapirender \
     && chmod -Rf 777 /var/www/liveapirender
 
