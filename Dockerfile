@@ -14,7 +14,7 @@ RUN set -e \
 
 COPY liveapirender.conf /etc/nginx/conf.d/
 COPY run.sh /root/
-copy ./ /var/www/liveapirender
+COPY ./ /var/www/liveapirender
 RUN set -e \
     && rm /etc/nginx/sites-enabled/default \
     && chmod +x /root/run.sh \
